@@ -3560,6 +3560,7 @@ img {
   .cover .align-bottom.relative-xs {
     position: relative;
     bottom: 0;
+    top: 20vh;
   }
   .cover.fullscreen {
     height: auto;
@@ -5543,7 +5544,7 @@ footer.bg-dark a {
 }
 
 .cover-parallax {
-  height: 100px;
+  height: 100vh !important;
 }
 
 @media all and (max-width: 767px) {
@@ -5556,4 +5557,36 @@ footer.bg-dark a {
   .align-bottom {
     top: 70%;
   }
+}
+
+.img {
+  max-width: 200px;
+}
+
+.payment {
+  margin-bottom: 30px;
+}
+
+.payment h4 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+
+.payment p {
+  color: #333;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.buttonCopy {
+  background: none;
+  border: none;
+}
+
+.copied {
+  font-size: 14;
+  color: green;
 }

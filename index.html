@@ -137,25 +137,38 @@
       </section>
 
       <section class="container text-center">
-        <div class="list-group col-sm-6 col-md-offset-3">
-          <img src="http://basico.teinvito.com.ar/img/agenda.jpg" alt="" />
+        <div class="list-group col-sm-6 col-md-offset-3" id="info">
+          <img class="img" src="./img/calendar.png" alt="" />
           <h3>¡Te esperamos para compartir!</h3>
           <p class="text-description">
             Para nosotros lo más importante es tu presencia, pero si querés
             tener un detalle con nosotros, que mejor que Nuestra luna de miel
           </p>
-          <p>
-            <b>BBVA</b>
-            <br />
-            CBU: 0170356440000033465294
-            <br />
-            Alias: <b>PABLOYFLOR</b>
-            <br />
-            <br />
-            <b>MERCADOPAGO</b>
-            <br />
-            Alias: <b>florypablo.mp</b>
-          </p>
+          <div class="payment">
+            <h4>BBVA</h4>
+            <p>
+              CBU: <b id="copy1">0170356440000033465294</b>
+
+              <button class="buttonCopy" onclick="copyContent1()">
+                <img src="./img/copy.svg" />
+              </button>
+            </p>
+            <p>
+              Alias: <b id="copy2">pablo.montesano</b>
+              <button class="buttonCopy" onclick="copyContent2()">
+                <img src="./img/copy.svg" />
+              </button>
+            </p>
+
+            <h4>MERCADOPAGO</h4>
+
+            <p>
+              Alias: <b id="copy3">florypablo.mp</b>
+              <button class="buttonCopy" onclick="copyContent3()">
+                <img src="./img/copy.svg" />
+              </button>
+            </p>
+          </div>
           <a
             class="btn btn-filled btn-lg mb0"
             target="_blank"
@@ -167,15 +180,12 @@
       </section>
 
       <section>
-        <div class="container text-center confirmacion" id="info">
+        <div class="container text-center confirmacion">
           <div class="row">
             <div class="text-center col-sm-12">
               <div class="feature">
                 <div class="text-center">
-                  <img
-                    src="http://basico.teinvito.com.ar/img/fiesta.jpg"
-                    alt=""
-                  />
+                  <img class="img" src="./img/couple.png" alt="" />
                   <h3 class="uppercase">CEREMONIA Y FIESTA</h3>
                   <h4 class="uppercase">JANOS DEL VISO</h4>
                 </div>
@@ -250,4 +260,22 @@
       style="display: none"
     ></div>
   </body>
+  <script>
+    let text1 = document.getElementById("copy1").innerHTML;
+    let text2 = document.getElementById("copy2").innerHTML;
+    let text3 = document.getElementById("copy3").innerHTML;
+
+    const copyContent1 = () => copyContent(text1);
+    const copyContent2 = () => copyContent(text2);
+    const copyContent3 = () => copyContent(text3);
+
+    const copyContent = async (element) => {
+      try {
+        await navigator.clipboard.writeText(element);
+        console.log("Content copied to clipboard");
+      } catch (err) {
+        console.error("Failed to copy: ", err);
+      }
+    };
+  </script>
 </html>
