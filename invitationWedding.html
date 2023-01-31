@@ -159,12 +159,29 @@
                 <img src="./img/copy.svg" />
               </button>
             </p>
-
-            <h4>MERCADOPAGO</h4>
+            <h4>PAYONEER</h4>
 
             <p>
-              Alias: <b id="copy3">florypablo.mp</b>
+              Usuario: <b id="copy3">pmontesanodm@gmail.com</b>
               <button class="buttonCopy" onclick="copyContent3()">
+                <img src="./img/copy.svg" />
+              </button>
+            </p>
+
+            <h4>BINANCE</h4>
+
+            <p>
+              Pay ID: <b id="copy4">230847086</b>
+              <button class="buttonCopy" onclick="copyContent4()">
+                <img src="./img/copy.svg" />
+              </button>
+            </p>
+
+            <h4>WISE</h4>
+
+            <p>
+              Account number: <b id="copy5">9600009882809009</b>
+              <button class="buttonCopy" onclick="copyContent5()">
                 <img src="./img/copy.svg" />
               </button>
             </p>
@@ -280,10 +297,14 @@
     let text1 = document.getElementById("copy1").innerHTML;
     let text2 = document.getElementById("copy2").innerHTML;
     let text3 = document.getElementById("copy3").innerHTML;
+    let text4 = document.getElementById("copy4").innerHTML;
+    let text5 = document.getElementById("copy5").innerHTML;
 
     const copyContent1 = () => copyContent(text1);
     const copyContent2 = () => copyContent(text2);
     const copyContent3 = () => copyContent(text3);
+    const copyContent4 = () => copyContent(text4);
+    const copyContent5 = () => copyContent(text5);
 
     const copyContent = async (element) => {
       try {
